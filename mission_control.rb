@@ -9,18 +9,19 @@ class Mission_control
   def read_instruction(rover)
     puts "Give me Orders"
     @instructions = gets.chomp
-    values.each do |x|
-      case x
-      when x == 'M'
-        rover.move
-      when x == 'L'
-        rover.turn_left
-      when x == 'R'
-        rover.turn_right
-      else
-        puts "That is NOT a valid command"
+    values = @instructions.split("")
+      values.each do |x|
+        if x == 'M'
+          rover.move
+        elsif x == 'L'
+          rover.turn_left
+        elsif x == 'R'
+          rover.turn_right
+        else
+            puts "That is NOT a valid command"
+        end
       end
-    end
+  end
 
 end
 
