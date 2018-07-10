@@ -35,3 +35,7 @@ user2 = Mission_control.new
 #instructions used on the rovers
 user1.read_instruction(rover1)
 user2.read_instruction(rover2)
+
+#print out new location of the rovers
+puts "Rover 1 is now at #{rover1.y}, #{rover1.x}, #{rover1.direction}"
+puts "Rover 2 is now at #{rover2.y}, #{rover2.x}, #{rover2.direction}"
